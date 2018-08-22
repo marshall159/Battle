@@ -15,11 +15,13 @@ end
 
 feature "it shows 2 names" do
   scenario "load the page" do
+    name1 = "Bob"
+    name2 = "Dave"
     visit("/")
-    fill_in "p1_name", with: "Bob"
-    fill_in "p2_name", with: "Dave"
+    fill_in "p1_name", with: name1
+    fill_in "p2_name", with: name2
     click_button "Submit"
-    expect(page).to have_content("Player 1: ")
-    expect(page).to have_content("Player 2: ")
+    expect(page).to have_content("Player 1: " + name1)
+    expect(page).to have_content("Player 2: " + name2)
   end
 end
