@@ -1,6 +1,8 @@
 require 'sinatra'
 require 'shotgun'
 
-get '/Battle' do
-  "Hello world!"
+class Battle < Sinatra::Base
+  get '/' do
+    "Hello Battle!"
+  end
 end
