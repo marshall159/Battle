@@ -16,11 +16,18 @@ class Battle < Sinatra::Base
   post '/names' do
     session[:p1], session[:p2] = params[:p1_name], params[:p2_name]
     session[:p1_hitpoints], session[:p2_hitpoints] = 100, 100
+    session[:turn] = :p1
     redirect '/play'
   end
 
-  post '/hitpoints/:player' do
+  post '/p1_attacks' do
+    session[:p2_hitpoints] -= 10
+    redirect '/play'
+  end
 
+  post '/p2_attacks' do
+    session[:p1_hitpoints] -= 10
+    redirect '/play'
   end
 
   get '/play' do

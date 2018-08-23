@@ -1,6 +1,13 @@
 <h1>Player 1: <%= @p1 %></h1>
 <h2>Hitpoints: <%= @hp1 %></h2>
+
+<form action="/p1_attacks" method="post">
+  <input type="submit" value="Attack P2">
+</form>
+
 <h1>Player 2: <%= @p2 %></h1>
 <h2>Hitpoints: <%= @hp2 %></h2>
 
-<button type="button">Attack</button>
+<form action="/p2_attacks" method="post">
+  <input type="submit" value="Attack P1">
+</form>
