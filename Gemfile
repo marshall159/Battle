@@ -5,5 +5,5 @@ source "https://rubygems.org"
 gem 'capybara'
 gem 'sinatra'
 gem 'selenium-webdriver'
-gem 'shotgun'
 gem 'rspec'
+gem 'thin'

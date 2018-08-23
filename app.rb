@@ -1,13 +1,13 @@
-require 'sinatra'
-require 'shotgun'
-
-
+require 'sinatra/base'
 
 class Battle < Sinatra::Base
+
   configure do
     enable :sessions
     set :session_secret, "My session secret"
   end
+
+  # enable :sessions
 
   get '/' do
     erb :index
@@ -23,4 +23,5 @@ class Battle < Sinatra::Base
     erb :play
   end
 
+  run! if __FILE__ == $0
 end
