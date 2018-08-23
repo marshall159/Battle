@@ -30,9 +30,4 @@ feature "it shows relevant information after names entered" do
     expect(page).to have_content("Player 1: Bob")
     expect(page).to have_content("Player 2: Jim")
   end
-  it "finds hitpoints" do
-    expect(page).to have_content("Hitpoints: 100")
-    expect(page).to have_content("Hitpoints: 100")
-  end
-
 end
